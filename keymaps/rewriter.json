@@ -1,0 +1,7 @@
+{
+  ".CodeMirror textarea": {
+    "alt-shift-d": "rewriter:toggle-definition",
+    "alt-shift-m": "rewriter:toggle-multiline-definition",
+    "alt-shift-t": "rewriter:toggle-table-row"
+  }
+}

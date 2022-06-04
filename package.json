@@ -1,0 +1,28 @@
+{
+  "name": "rewriter",
+  "main": "./lib/rewriter",
+  "version": "0.1.0",
+  "description": "A collection of useful markdown text editing commands",
+  "keywords": [],
+  "repository": "https://github.com/chartoin/inkdrop-rewriter",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "engines": {
+    "inkdrop": "^5.3.1"
+  },
+  "dependencies": {
+    "@ampproject/remapping": "^2.2.0",
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "jest": "^28.1.0"
+  }
+}
