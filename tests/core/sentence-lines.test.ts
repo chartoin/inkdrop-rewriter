@@ -1,10 +1,9 @@
 'use babel';
 
-import {SentenceLines} from './sentence-lines';
+import {SentenceLines} from '../../src/core/sentence-lines';
 
-let obj;
+let obj: SentenceLines;
 beforeEach(() => { obj = new SentenceLines(); });
-afterEach(() => { obj = null; });
 
 /* -------- isParagraph -------- */
 test('sequence of sentences are recognized as a paragraph', () => {

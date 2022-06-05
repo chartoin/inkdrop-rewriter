@@ -1,11 +1,10 @@
 'use babel';
 
-import {MultilineDefinition} from './multiline-definition';
+import {MultilineDefinition} from '../../src/core/multiline-definition';
 
-let definition;
+let definition: MultilineDefinition;
 
 beforeEach(() => { definition = new MultilineDefinition(); });
-afterEach(() => { definition = null; });
 
 /* -------- isTerm -------- */
 test('valid term is detected as term', () => {

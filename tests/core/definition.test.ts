@@ -1,12 +1,10 @@
 'use babel';
 
-import {Definition} from './definition';
+import {Definition} from '../../src/core/definition';
 
-let definition;
+let definition: Definition;
 
 beforeEach(() => { definition = new Definition('*', '* -'); });
-
-afterEach(() => { definition = null; });
 
 /* -------- isDefinition -------- */
 test('recognize definition line', () => {
@@ -33,7 +31,7 @@ test('wrap first word with prefix and suffix', () => {
 
 test('wrap first word with prefix when suffix is not given', () => {
 	definition = new Definition('ABBA');
-	expect(definition.wrapTerm('word', 'A')).toMatch(/AwordA/);
+	expect(definition.wrapTerm('word')).toMatch(/ABBAwordABBA/);
 });
 
 /* -------- unwrapTerm -------- */

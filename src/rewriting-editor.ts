@@ -1,6 +1,8 @@
 'use babel';
 
 import { Disposable, CompositeDisposable } from 'event-kit';
+import CodeMirror from 'codemirror';
+import {Inkdrop} from './core/types';
 
 import {Definition} from "./core/definition";
 import {MultilineDefinition} from "./core/multiline-definition";
@@ -8,10 +10,14 @@ import {Table} from "./core/table";
 import {SentenceLines} from "./core/sentence-lines";
 
 const NAMESPACE='rewriter';
+declare var inkdrop: Inkdrop;
 
-export class Editor extends Disposable {
-	constructor(cm) {
-		super(() => this.destroy());
+export class RewritingEditor extends Disposable {
+	cm: CodeMirror.Editor;
+	subscriptions: CompositeDisposable;
+
+	constructor(cm: CodeMirror.Editor) {
+		super(() => this.dispose());
 		this.cm = cm;
 		this.subscriptions = new CompositeDisposable();
 		this.registerCommand('toggle-definition', () => this.executeOperationOnSelection(Definition, ['*', '* -']));
@@ -20,8 +26,8 @@ export class Editor extends Disposable {
 		this.registerCommand('toggle-sentence-lines', () => this.executeOperationOnSelection(SentenceLines));
 	}
 
-	registerCommand(command, cb) {
-		const targetElem = this.cm.display.wrapper;
+	registerCommand(command: string, cb: () => void) {
+		const targetElem = this.cm.getWrapperElement();
 		this.subscriptions.add(
 			inkdrop.commands.add(targetElem, {
 				[`${NAMESPACE}:${command}`]: () => {
@@ -34,12 +40,12 @@ export class Editor extends Disposable {
 	/* ------------------------------------- */
 	/* -------- Selection Operators -------- */
 	/* ------------------------------------- */
-	executeOperationOnSelection(operatorClass, args) {
+	executeOperationOnSelection(operatorClass: any, args?: string[]) {
 		let operator = (args === null || typeof args === 'undefined')	? new operatorClass() : new operatorClass(...args);
 		this.cm.replaceSelections(operator.execute(this.cm.getSelections()));
 	}
 
-	destroy() {
+	dispose() {
 		this.subscriptions.dispose();
 	}
 }

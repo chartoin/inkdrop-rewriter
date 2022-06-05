@@ -1,10 +1,9 @@
 'use babel';
 
-import {Table} from './table';
+import {Table} from '../../src/core/table';
 
-let table;
+let table: Table;
 beforeEach(() => { table = new Table(); });
-afterEach(()  => { table = null; });
 
 /* -------- isCSV -------- */
 test('line with a comma is a csv', () => {
