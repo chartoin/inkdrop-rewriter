@@ -22,7 +22,7 @@ Rewriter is a collection of useful commands that operate on markdown text.
 
 ![sentence-lines](https://github.com/chartoin/inkdrop-rewriter/raw/main/images/rewriter-sentence-lines.gif)
 
-## Sentence lines
+## Enlisted phrases
 `alt-shift-e` - `rewriter:toggle-enlisted-phrases`
 
 ![enlisted-phrases](https://github.com/chartoin/inkdrop-rewriter/raw/main/images/rewriter-enlisted-phrases.gif)
