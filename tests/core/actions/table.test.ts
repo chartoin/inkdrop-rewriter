@@ -1,6 +1,6 @@
 'use babel';
 
-import {Table} from '../../src/core/table';
+import {Table} from '../../../src/core/actions/table';
 
 let table: Table;
 beforeEach(() => { table = new Table(); });

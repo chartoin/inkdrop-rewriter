@@ -1,9 +1,9 @@
 'use babel';
 
-import {SelectionOperator} from './selection-operator';
-import {RXHelper,String} from './utils';
+import {MultiSelectionAction} from '../actions';
+import {RXHelper,String} from '../utils';
 
-export class Definition extends SelectionOperator {
+export class Definition extends MultiSelectionAction {
 	prefix: string = '';
 	suffix: string = '';
 	defregex: RegExp = new RegExp('');

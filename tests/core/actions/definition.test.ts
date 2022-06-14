@@ -1,6 +1,6 @@
 'use babel';
 
-import {Definition} from '../../src/core/definition';
+import {Definition} from '../../../src/core/actions/definition';
 
 let definition: Definition;
 

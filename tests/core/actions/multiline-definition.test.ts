@@ -1,6 +1,6 @@
 'use babel';
 
-import {MultilineDefinition} from '../../src/core/multiline-definition';
+import {MultilineDefinition} from '../../../src/core/actions/multiline-definition';
 
 let definition: MultilineDefinition;
 

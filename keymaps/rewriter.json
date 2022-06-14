@@ -3,6 +3,7 @@
     "alt-shift-d": "rewriter:toggle-definition",
     "alt-shift-m": "rewriter:toggle-multiline-definition",
     "alt-shift-t": "rewriter:toggle-table-row",
-    "alt-shift-p": "rewriter:toggle-sentence-lines"
+    "alt-shift-p": "rewriter:toggle-sentence-lines",
+    "alt-shift-e": "rewriter:toggle-enlisted-phrases"
   }
 }

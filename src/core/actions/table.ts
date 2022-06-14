@@ -1,14 +1,14 @@
 'use babel';
 
-import {SelectionOperator} from './selection-operator';
-import {String} from './utils';
+import {MultiSelectionAction} from '../actions';
+import {String} from '../utils';
 
-export class Table extends SelectionOperator {
-	tableRegex: RegExp = new RegExp('');
+export class Table extends MultiSelectionAction {
+	tableRegex: RegExp = /^\|.*\|$/;
 
-	constructor() {
+	constructor(tableRegex?: RegExp) {
 		super();
-		this.tableRegex = /^\|.*\|$/;
+		this.tableRegex = (tableRegex === null || typeof tableRegex === 'undefined') ? this.tableRegex : tableRegex;
 	}
 
 	handleLine(line: string) {

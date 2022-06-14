@@ -4,6 +4,8 @@ import {CompositeDisposable} from 'event-kit';
 import {RewritingEditor} from "./rewriting-editor";
 import {Inkdrop,Editor} from './core/types';
 
+const {logger} = require('inkdrop');
+
 let editor: Editor | null = null;
 declare var inkdrop: Inkdrop;
 

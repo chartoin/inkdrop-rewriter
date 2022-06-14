@@ -10,7 +10,7 @@ Rewriter is a collection of useful commands that operate on markdown text.
 ## Multiline Definitions
 `alt-shift-m` - `rewriter:toggle-multiline-definition`
 
-![multiline-definitions](https://github.com/chartoin/inkdrop-rewriter/raw/main/images/rewriter-multiline-definition.gif)
+![multiline-definitions](https://github.com/chartoin/inkdrop-rewriter/raw/main/images/rewriter-multiline-definitions.gif)
 
 ## Table Rows
 `alt-shift-t` - `rewriter:toggle-table-row`
@@ -21,4 +21,9 @@ Rewriter is a collection of useful commands that operate on markdown text.
 `alt-shift-p` - `rewriter:toggle-sentence-lines`
 
 ![sentence-lines](https://github.com/chartoin/inkdrop-rewriter/raw/main/images/rewriter-sentence-lines.gif)
+
+## Sentence lines
+`alt-shift-e` - `rewriter:toggle-enlisted-phrases`
+
+![enlisted-phrases](https://github.com/chartoin/inkdrop-rewriter/raw/main/images/rewriter-enlisted-phrases.gif)
 

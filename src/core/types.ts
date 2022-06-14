@@ -19,3 +19,7 @@ export interface Editor {
   cm: CodeMirror.Editor;
   forceUpdate(): any;
 }
+
+export interface Action {
+	execute(input: any): any;
+}

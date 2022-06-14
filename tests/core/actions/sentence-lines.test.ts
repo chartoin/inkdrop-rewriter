@@ -1,6 +1,6 @@
 'use babel';
 
-import {SentenceLines} from '../../src/core/sentence-lines';
+import {SentenceLines} from '../../../src/core/actions/sentence-lines';
 
 let obj: SentenceLines;
 beforeEach(() => { obj = new SentenceLines(); });
